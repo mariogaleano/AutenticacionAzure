@@ -1,0 +1,32 @@
+﻿<h1>P&aacute;gina 2</h1>
+
+<h3>Consultar personas</h3>
+
+<div>
+    <input type="button" value="Consultar" class="btn btn-primary" ng-click="vm.Consultar()" />
+    <input type="button" value="Limpiar" class="btn btn-danger" ng-click="vm.Personas = null;vm.Error = null;"/>
+
+    <div class="alert alert-danger" ng-show="vm.Error">
+        {{vm.Error | json}}
+    </div>
+
+
+
+
+    <table class="table table-bordered" ng-show="vm.Personas">
+        <tr>
+            <td>Id</td>
+            <td>Nombre</td>
+            <td>Email</td>
+            <td>Fecha de nacimiento</td>
+        </tr>
+        <tr ng-repeat="persona in vm.Personas">
+            <td>{{persona.Id}}</td>
+            <td>{{persona.Nombre}}</td>
+            <td>{{persona.Email}}</td>
+            <td>{{persona.FechaNacimiento | date}}</td>
+        </tr>
+    </table>
+
+
+</div>
