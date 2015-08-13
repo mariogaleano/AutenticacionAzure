@@ -15,7 +15,7 @@
         return service;
 
         function getData() {
-            return $http.get('http://localhost:48006/api/datos');
+            return $http.get('http://localhost/AutenticacionAzure/Servicios/api/datos');
         }
     }
 })();
